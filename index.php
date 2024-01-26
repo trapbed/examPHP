@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Задачник ЕГЭ по информатике.</h1>
-    <span id='time'></span>
-    <?php
+
+        <?php
                     switch (date("m")){
                         case 1:
                             $month= "Январь";
@@ -47,17 +47,20 @@
                             $month= "Декабрь";
                             break;
                         }
-                        $hour=date('H');
-                        $minutes=date('i');
-                        $seconds=date('s');
+                        $hour=date('H')+2;
+                        // $minutes=date('m');
+                        // $seconds=date('s');
                         
-                        $clock=[$hour, $minutes, $seconds];
-                        echo date("$month d, 20y "." ".$clock[0].":".$clock[1].":"."$clock[2]");
-                        ?>
+                        // $clock=[$hour, $minutes, $seconds];
+                        echo date("$month d, 20y ");
+            ?>
+
+            <span id="time"></span>
     <nav>
         <li><a href="/task.php?task=0">1.Задания на перевод из 2СС в 10СС.</a></li>
         <li><a href="/task.php?task=1">2.Задания на получение размера картинки в Кбит.</a></li>
         <li><a href="/task.php?task=2">3.Задания на подсчет количества букв в тексте.</a></li>
     </nav>
+    <script src="time.js"></script>
 </body>
 </html>
